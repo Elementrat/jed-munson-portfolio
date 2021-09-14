@@ -24,9 +24,6 @@ h1{
   font-size: 3em;
   text-align: center;
   color: #333;
-  padding: 0em;
-  margin-bottom: 2em;
-
 }
 
 h3{
@@ -39,13 +36,54 @@ h4{
   font-weight: 900;
 }
 
-.list{
-  padding: 3em 8em;
+.app{
   animation: fadein 2s;
   position: relative;
   z-index: 0;
+  display: grid;
+  grid-template-areas: 'header header'
+                       'primary secondary'
+                       'footer footer';
+  grid-template-columns: '66% 1fr';
+  max-width: 1024px;
+  margin: 0px auto;
+  min-height: 100vh;
 }
 
+@media screen and (max-width: 966px){
+  .app{
+  grid-template-areas: 'header'
+  'primary'
+  'secondary'
+  'footer';
+  }
+}
+
+
+.footer{
+  grid-area: footer;
+}
+
+.header{
+  padding: 1em 1em;
+  grid-area: header;
+}
+
+.primary{
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  grid-area: primary;
+}
+
+.secondary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: secondary;
+  min-width: 300px;
+}
 
 a, a:visited {
   color: #000;
@@ -58,12 +96,19 @@ a:hover {
 }
 
 .bio{
-  padding: 1.8em 0em 3em 2em;
-  float: right;
   text-align: justify;
-  width: 30vw;
-  z-index: 99999;
   position: relative;
+}
+
+.bio-image{
+  background-image: url("../img/portfolio-pic.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: -46px -78px;
+  max-width: 400px;
+  margin-bottom: 10px;
+  height: 240px;
 }
 
 .bioTitle{
@@ -111,10 +156,6 @@ a > .fab, a > .fas{
 
 @media only screen and (max-device-width: 480px) {
 
-        h1{
-          margin-right: -0.7em;
-          padding-bottom: 0.4em;
-        }
         h1.name{
           text-align: center;
           margin: 2em 0 0 0;
