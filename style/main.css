@@ -53,8 +53,8 @@ h4{
 @media screen and (max-width: 966px){
   .app{
   grid-template-areas: 'header'
-  'primary'
   'secondary'
+  'primary'
   'footer';
   }
 }
@@ -98,17 +98,21 @@ a:hover {
 .bio{
   text-align: justify;
   position: relative;
+  padding: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bio-image{
   background-image: url("../img/portfolio-pic.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: -46px -78px;
-  max-width: 400px;
+  background-size: cover;
+  width: 430px;
+  height: 338px;
   margin-bottom: 10px;
-  height: 240px;
 }
 
 .bioTitle{
