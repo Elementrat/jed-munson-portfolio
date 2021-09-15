@@ -79,7 +79,7 @@ h4{
 .secondary{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   grid-area: secondary;
   min-width: 300px;
