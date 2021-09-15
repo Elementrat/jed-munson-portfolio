@@ -44,7 +44,7 @@ h4{
   grid-template-areas: 'header header'
                        'primary secondary'
                        'footer footer';
-  grid-template-columns: '66% 1fr';
+  grid-template-columns: 2fr 1fr;
   max-width: 1024px;
   margin: 0px auto;
   min-height: 100vh;
@@ -56,6 +56,11 @@ h4{
   'secondary'
   'primary'
   'footer';
+  grid-template-columns: 1fr;
+  }
+
+  .bio-text{
+    padding:10px;
   }
 }
 
@@ -98,7 +103,6 @@ a:hover {
 .bio{
   text-align: justify;
   position: relative;
-  padding: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,14 +112,11 @@ a:hover {
 .bio-image{
   background-image: url("../img/portfolio-pic.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 430px;
-  height: 338px;
+  background-size: 140%;
+  background-position: -25px;
+  width: 100%;
+  height: 259px;
   margin-bottom: 10px;
-}
-
-.bioTitle{
-  display: none;
 }
 
 .contact{
